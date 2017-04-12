@@ -303,7 +303,7 @@ static size_t unicode_loop_convert(iconv_t icd,
     conv_t cd = (conv_t) icd;
     size_t result = 0;
     const unsigned char* inptr = (const unsigned char*) * inbuf;
-    size_t inleft = *inbytesleft;
+    int inleft = *inbytesleft;
     unsigned char* outptr = (unsigned char*) * outbuf;
     size_t outleft = *outbytesleft;
     while (inleft > 0) {
